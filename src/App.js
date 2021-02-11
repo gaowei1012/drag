@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import './app.scss'
+import {Button} from 'antd'
+import {useDrag} from 'react-dnd'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      hello react
+      <Button type='primary'>HELLO</Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
