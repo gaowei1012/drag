@@ -1,12 +1,9 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { Form, Button, Input } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import '../style/view-style/login.scss'
 
 const Login = (props) => {
-    useEffect(() => {
-        console.log('props', props)
-    }, [])
     // 登录事件
     const on_submit = (value) => {
         console.log('value', props)
@@ -16,7 +13,10 @@ const Login = (props) => {
         <div className='login-container'>
             <Form layout='horizontal' className='form-box' onFinish={on_submit} >
                 <Form.Item name='username' rules={[{required: true, message: '请输入用户名'}]}>
-                    <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="请输入用户名" />
+                    <Input 
+                        prefix={<UserOutlined className="site-form-item-icon" />}
+                        placeholder="请输入用户名"
+                    />
                 </Form.Item>
                 <Form.Item name='password' rules={[{required: true, message: '请输入密码'}]}>
                     <Input

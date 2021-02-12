@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MainRouter from './pages/Login'
+import MainRouter from './router'
 import {DndProvider} from 'react-dnd'
 import {HTML5Backend} from 'react-dnd-html5-backend'
 import reportWebVitals from './reportWebVitals'
