@@ -1,7 +1,7 @@
 import React from 'react'
-import {Switch, Route, Router} from 'react-router-dom'
-import DefaultLayout from '../pages/DefaultLayout'
-import Login from '../pages/Login'
+import {Switch, Route, HashRouter as Router} from 'react-router-dom'
+import DefaultLayout from '../pages/DefaultLayout/DefaultLayout'
+import Login from '../pages/Login/Login'
 import { history } from "../utils/history"
 
 function MainRouter() {
