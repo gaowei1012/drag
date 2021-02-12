@@ -9,7 +9,8 @@ const Login = (props) => {
     }, [])
     // 登录事件
     const on_submit = (value) => {
-        console.log('value', value)
+        console.log('value', props)
+        props.history.push('/home')
     }
     return (
         <div className='login-container'>

@@ -1,14 +1,20 @@
 import React from 'react'
-import {Switch, Route, BrowserRouter} from 'react-router-dom'
+import {Switch, Route, HashRouter as Router} from 'react-router-dom'
 import Login from '../pages/Login'
+import App from '../pages/App'
+
+import {createBrowserHistory} from 'history'
+
+const history = createBrowserHistory()
 
 const MainRouter = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Switch>
                 <Route path='/login' component={Login} />
+                <Route path='/home' component={App} />
             </Switch>
-        </BrowserRouter>
+        </Router>
     )
 }
 
