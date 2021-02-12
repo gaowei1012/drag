@@ -12,7 +12,7 @@ const DefaultLayout = (props) => {
     return (
         <div>
             <Button onClick={() => {
-                props.history.go(-1)
+                props.history.push('/')
             }}>返回</Button>
         </div>
     )
