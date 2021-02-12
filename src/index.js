@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.scss'
-import App from './App'
+import MainRouter from './pages/Login'
 import {DndProvider} from 'react-dnd'
 import {HTML5Backend} from 'react-dnd-html5-backend'
 import reportWebVitals from './reportWebVitals'
+import './index.scss'
 
 ReactDOM.render(
   <DndProvider backend={HTML5Backend}>
-    <App/>
+    <MainRouter />
   </DndProvider>,
   // <React.StrictMode>
   //   <App />
