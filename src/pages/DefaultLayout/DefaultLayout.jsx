@@ -40,6 +40,17 @@ const DefaultLayout = (props) => {
             }, 1500)
         }
     }, [])
+    const time = new Date()
+    useEffect(() => {
+        fetch(`http://39.99.241.232:7080/login/qr/key?${time}`)
+            .then((resonse) => {
+                const result = resonse.json()
+                console.log('result', result)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
     return (
         <div>
             <Button onClick={() => {

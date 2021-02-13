@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button, Input } from 'antd'
+import { Form, Button, Input, message } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import '../../style/view-style/login.scss'
 
@@ -7,8 +7,13 @@ const Login = (props) => {
     const [loading, setLoading] = useState(false)
     // 登录事件
     const on_submit = (value) => {
+        setLoading(true)
         console.log('value', props)
-        props.history.push('/home')
+        message.success('登录成功', 1)
+        setTimeout(() => {
+            setLoading(false)
+            props.history.push('/home')
+        }, 1000)
     }
     return (
         <div className='login-container'>
